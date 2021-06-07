@@ -8,6 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import Homepage from './Homepage';
 
 const BodyStyling = styled.div`
   // background-color: lightGray;

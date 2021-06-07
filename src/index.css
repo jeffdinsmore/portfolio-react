@@ -1,11 +1,31 @@
-body {
+@font-face{
+  src: url(https://jeffdinsmore.com/Fonts/BentonSans-Regular-Regular.otf);
+  font-family: Benton;
+}
+@font-face{
+  src: url(https://jeffdinsmore.com/Fonts/NimbusSan-Bold.ttf);
+  font-family: Nimbus;
+}
+
+html, body{
+  background-color: hsl(0, 0%, 100%);
+  margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{
+  text-decoration: none;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -52,7 +72,7 @@ div#footer{
   padding:10px;
   width: 100%;
   background-color: #8FB7AE;
-  height: 170px;
+  height: 70px;
   font-size: 18px;
   font-family: Benton;
   font-weight: 200;
@@ -105,64 +125,112 @@ div#footer{
     display: none;
   }
 #LinkedIn {
-  display: none;
+  display: inline-block;
 }
 
 #LinkedInImage {
   margin-top:-2px;
-  display: inline-block;
+  display: none;
   width: 24px;
 }
 /*---End Footer---*/
-#portland {
-  color:white;
-  padding-right:60px;
-  display: inline-block;
+
+@media screen and (max-width: 312px) {
+  li#headerLiLeft {
+    margin-top: 11px;
+    margin-left: 0%;
   }
-  #Resume {
-    display: none;
-    
-  }
+}
+@media screen and (min-width: 319px) {
   #Resume2 {
-    padding-right: 30%;
+      padding-right: 26px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+  .TopArrow {
+    width:40px
+  }
+}
+@media screen and (min-width: 359px) { 
+  #Resume2 {
+    padding-right: 48px;
+    display: inline-block;
+    margin-top: 2px;
+  }
+}
+@media screen and (min-width: 411px) {
+    
+  #Resume2 {
+      padding-right: 66px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .TopArrow {
+      width:55px
+    }
+/*---ProofScan CSS---*/
+
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  
+}
+.video2{
+    width:360px; height:202.5px;
+  }
+  td {
+    font-size: 18px;
+  }
+  th {
+    font-size: 20px;
+  }
+  /*---End of ProofScan CSS---*/
+}
+
+@media screen and (min-width: 479px) {
+  #Resume2 {
+    padding-right: 92px;
     display: inline-block;
     margin-top: 2px;
   }
 
-@media screen and (max-width: 840px) {
-  li#headerLiLeft {
-    margin-top: 11px;
-    margin-left: 5%;
-  }
-  ul#headerUl {
-    margin: 0;
-    margin-right: 5%;
-  }
-  li#footerLi {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-left: 4%;
-  }
-  .navbar-brand {
-    margin-left: 0%;
-  }
-  .navbar-collapse {
-    margin-left: 0%;
-  }
+/*---ProofScan CSS---*/
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  
 }
-
-@media screen and (max-width: 760px) {
-  li#headerLiLeft {
-    margin-top: 11px;
-    margin-left: 5%;
+.video2{
+    width:420px; height:236.25px;
   }
-  ul#headerUl {
-    margin: 0;
-    margin-right: 5%;
-  }
+/*---End of ProofScan CSS---*/
 }
-
-
+@media screen and (min-width: 567px) {
+  .TopArrow {
+    width:70px
+  }
+  .image-header-Shanghai {
+    width: 50%;
+  }
+  
+  .video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    
+  }
+  .video2{
+      width:500px; height:281.25px;
+    }
+  .image-header-ProofScan{
+    width: 38%;
+    }
+}
 @media screen and (max-width: 580px) {
   li#headerLiLeft {
     margin-top: 11px;
@@ -184,11 +252,392 @@ div#footer{
     font-size: 14px;
     margin-left: 4%;
   }
+  #footer{
+    width: 100%;
+    background: #8FB7AE;
+    height: 70px;
+    font-size: 20px;
+    font-family: Benton;
+    font-weight: 200;
+    }
+    
+  footer ul li a{
+    color: #ffffff;
+  }
+    #footer-left-nav{
+      float: left;
+      margin-top:25px;
+      margin-left: 10.0%;
+      list-style-type: none;
+      padding:0%;
+    }
+    #footer-left-nav li{
+      display: inline-block;
+      
+    }
+    
+    #footer-right-nav{
+      float: right;
+      margin-top: 25px;
+      margin-right: 10%;
+    }
+    #footer-right-nav li{
+      display: inline-block;
+      list-style-type: none;
+    }
+  #LinkedInImage {
+    display:inline-block;
+  }
+  #LinkedIn {
+    display:none;
+  }
+  #Resume {padding-left:100px;
+    display: inline-block;
+    }
+    #Resume2 {
+      display: none;
+      padding:0px;
+    }
+  /*---End Footer---*/
+}
+@media screen and (min-width: 667px) {
+  h1 {
+    font-size: 48px;
+    margin-left: 10%;
+    margin-right: 10%;
+    Padding-top: 100px;
+    font-weight: 900;
+  }
+  
+  h2 {
+    font-size: 38px;
+    margin-left: 10%;
+    margin-right: 10%;
+    Padding-top: 40px;
+  }
+  h3 {
+    font-size: 32px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 30px;
+  }
+  p {
+    font-size: 24px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  /*---Astra Practice---*/
+  .container-Astra {
+    margin-left: 6.5%;
+    width:86.5%;
+  }
+  .image-Astra{ 
+    width:70%;
+  }
+  p.Astra {
+    font-size: 24px;
+  }
+  p.text-below-Astra2 {
+    font-size: 24px;
+  }
+  p.text-below-Astra3 {
+    font-size: 24px;
+  }
+  .text-below-Astra {
+    font-size: 24px;
+  }
+  .text-box-Astra {
+    font-size: 24px;
+  }
+  ul.goal {
+    list-style-type: disc;
+    color: #1B3F73;
+    margin-left: 10%;
+    font-size: 24px;
+    margin-right: 10%;
+    font-family: Benton;
+  }
+
+/*---End of Astra Practice---*/
+
+/*---ProofScan---*/
+  p.p5 {
+    font-size: 24px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .container {
+    margin-left: 6.5%;
+    width:86.5%;
+  }
+  .container2 {
+    margin-left: 6.5%;
+    width:86.5%;
+}
+  .container3 {
+  margin: 0 auto;
+  width: 580px;
+  height: 326.25px;
+  padding: 25px;
+  background-color:rgb(220, 220, 220);
+  position:relative;
+}
+.container-green {
+  margin-left: 6.5%;
+  width:86.5%;
+}
+.container-green2 {
+  margin-left: 6.5%;
+  width:86.5%;
+ }
+.container-pink {
+  margin-left: 6.5%;
+  width:86.5%;
+}
+.container-pink2 {
+  margin-left: 6.5%;
+  width:86.5%;
+ }
+ .container-pink-score {
+  margin-left: 6.5%;
+  width:86.5%;
+ }
+ .Table-mobile-large{
+    font-family: Benton;
+    border-collapse: collapse;
+    width: 81%;
+    background-color: #CADBF9;
+    display: block;
+    margin: auto;
+ }
+.text-box {
+  font-size: 24px;
+  overflow:scroll;
+}
+.text-box2 {
+  font-size: 24px;
+ }
+.text-box3 {
+  font-size: 24px;
+ }
+ .text-box-green {
+  font-size: 24px;
+}
+.text-box-green2 {
+  font-size: 24px;
+ }
+ .text-box-pink {
+  font-size: 24px;
+}
+td {
+  font-size: 24px;
+}
+th {
+  font-size: 24px;
+}
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  
+}
+.video2{
+    width:580px; height:326.25px;
+  }
+  .image-single{
+    width:25%;
+  }
+/*---End of ProofScan---*/
+
+
+/*---New Seasons---*/
+.image-NewSeasons {
+  width: 60%;
+}
+.image-tag {
+  width:46%;
+  margin: 0% 0% 3% 10%;
+  float:left;
+}
+.image-tradelabel {
+  width:46%;
+  margin: 0% 0% 3% 10%;
+  float:left;
+}
+p.NSM-below {
+  color: #396E35;
+  margin: 0% 52% 0% 10%;
+  font-size: 22px;
+  font-family: Benton;
+  clear:left;
+  display:none;
+}
+p.NSM-below2 {
+  margin: 0% 10% 0% 60%;
+  font-size: 22px;
+  Line-height: normal;
+}
+.text-right-NSM {
+  margin: 0% 10% 10% 10%;
+  font-size: 24px;
+  line-height: normal;
 }
 
-@media screen and (max-width: 312px) {
+/*---End of New Seasons---*/
+
+/*---Shanghai Gardens---*/
+.container-Shanghai {
+  margin-left: 6.5%;
+  width:86.5%;
+}
+.image1 {
+  margin-left: 10%;
+  padding-top:20px;
+  width:75%;
+}
+.image-callouts {
+  width:65%;
+  margin:4% 0% 0% 10%;
+}
+.image-callouts2 {
+  width:73.4%;
+  margin:6% 0% 0% 10%;
+}
+.image-callouts3 {
+  width:68%;
+  margin:6% 0% 0% 10%;
+}
+.image-gif {
+  width:80%;
+}
+.image-shanghai {
+  width: 80%;
+}
+p.Shanghai-text {
+  margin-left: 4%;
+  font-size: 24px;
+  margin-right: 50%;
+}
+p.Shanghai-text-CallOut {
+  margin-left: 10%;
+  font-size: 20px;
+  margin-right: 10%;
+} 
+p.p4 {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+li.card-sort2 {
+  padding-right:44.0%;
+}
+ul.card-sort {
+  margin:4% 0% 0% 15%;
+}
+.picture-shanghai {
+  margin:1% 0% 0% 10%;
+}
+}
+@media screen and (min-width: 672px) {
+  #Email {
+  display: none;
+  }
+  #Email2 {
+  display: inline-block;
+  color:white;
+  margin-top: 0px;
+  }
+}
+@media screen and (min-width: 732px) {
+  /*---ProofScan CSS---*/
+  .container3 {
+    margin: 0 auto;
+    width: 660px;
+    height: 415px;
+    padding: 30px;
+    background-color:rgb(220, 220, 220);
+    position:relative;
+  }
+  .video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+  }
+  .video2{
+    width:660px; height:415px;
+  }
+  /*---ProofScan CSS---*/
+}
+@media screen and (max-width: 760px) {
   li#headerLiLeft {
     margin-top: 11px;
+    margin-left: 5%;
+  }
+  ul#headerUl {
+    margin: 0;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 840px) {
+  li#headerLiLeft {
+    margin-top: 11px;
+    margin-left: 5%;
+  }
+  ul#headerUl {
+    margin: 0;
+    margin-right: 5%;
+  }
+  li#footerLi {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 4%;
+  }
+  .navbar-brand {
+    margin-left: 0%;
+  }
+  .navbar-collapse {
     margin-left: 0%;
   }
 }
+@media screen and (min-width: 900px) {
+  #portland {
+    color:white;
+    padding-right:60px;
+    display: inline-block;
+    }
+}
+@media screen and (min-width: 992px) {
+  .text-box-home {
+    font-size: 2.4vw;
+  }
+}
+
+@media screen and (min-width: 1090px) {
+  .Table-desktop {
+    font-family: Benton;
+    border-collapse: collapse;
+    width: 81%;
+    background-color: #CADBF9;
+    display: block;
+    margin: auto;
+  }
+  .Table-mobile-large{
+    display: none;
+  }
+  td {
+    width:0%
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
